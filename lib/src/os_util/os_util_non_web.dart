@@ -21,4 +21,28 @@ class OSUtilNonWeb extends OSUtil {
         return Platform.operatingSystem;
     }
   }
+
+  @override
+  String? getOSVersion() {
+    return Platform.operatingSystemVersion;
+  }
+
+  @override
+  String? getLocale() {
+    return Platform.localeName;
+  }
+
+  @override
+  String? getLanguage() {
+    final locale = Platform.localeName;
+    final underscoreIndex = locale.indexOf('_');
+    if (underscoreIndex > 0) {
+      return locale.substring(0, underscoreIndex);
+    }
+    final dashIndex = locale.indexOf('-');
+    if (dashIndex > 0) {
+      return locale.substring(0, dashIndex);
+    }
+    return locale;
+  }
 }

@@ -10,4 +10,7 @@ abstract class OSUtil {
   }
 
   String? getOSName();
+  String? getOSVersion();
+  String? getLocale();
+  String? getLanguage();
 }

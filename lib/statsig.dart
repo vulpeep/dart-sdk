@@ -1,3 +1,4 @@
+export 'src/statsig_metadata.dart' show StatsigMetadata;
 export 'src/statsig_options.dart' show StatsigOptions, StatsigEnvironment;
 export 'src/statsig_user.dart' show StatsigUser;
 export 'src/dynamic_config.dart' show DynamicConfig;
